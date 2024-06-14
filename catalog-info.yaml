@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: zyjyhr6en-nodejs-gitops
+  description: This is GitOps manifest for zyjyhr6en-nodejs   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-name: zyjyhr6en-nodejs
+    janus-idp.io/tekton: zyjyhr6en-nodejs 
+    backstage.io/kubernetes-id: zyjyhr6en-nodejs 
+    backstage.io/techdocs-ref: dir:. 
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:zyjyhr6en-nodejs
